@@ -1,0 +1,123 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Estilo del catálogo */
+.catalog {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+/* Tarjeta base */
+.catalog-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fade-in 1s ease;
+}
+
+/* Animación 1: Fade-In al cargar */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animación 2: Escala al pasar el mouse */
+.catalog-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen con animación de rotación */
+.catalog-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.catalog-item:hover img {
+    transform: rotate(3deg);
+}
+
+/* Texto con deslizamiento */
+.catalog-item p {
+    padding: 10px;
+    background: #ffcc00;
+    margin: 0;
+    font-weight: bold;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.catalog-item:hover p {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Animación 3: Rebote al cargar */
+.catalog-item {
+    animation: bounce-in 0.6s ease-in-out;
+}
+
+@keyframes bounce-in {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Animación 4: Efecto de sombra en las tarjetas */
+.catalog-item:hover::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 2px solid #ffcc00;
+    border-radius: 10px;
+    transition: border-color 0.3s ease;
+}
+
+/* Animación 5: Movimiento de entrada de izquierda a derecha */
+.catalog-item {
+    animation: slide-in 0.8s ease;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

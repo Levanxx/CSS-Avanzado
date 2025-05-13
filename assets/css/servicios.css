@@ -1,0 +1,182 @@
+/* servicios.css */
+
+/* Alineación centrada y animación */
+.animated-text {
+    display: inline-block;
+    font-size: 2rem;  /* Ajusta el tamaño del texto */
+    font-weight: bold;
+    color: #000;  /* Color del texto */
+    text-shadow: 2px 2px 5px rgba(0, 255, 255, 0.3);  /* Sombra celeste del texto */
+    animation: moveShadow 2s ease-in-out infinite, shadowEffect 2s linear infinite;  /* Aplicar ambas animaciones */
+    text-align: center;  /* Asegura que el texto esté centrado */
+    width: 100%;  /* Asegura que ocupe todo el ancho disponible */
+
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    animation: moveText 5s linear infinite;  /* Animación para mover el texto */
+  }
+  
+  /* Animación para mover el texto de izquierda a derecha */
+  @keyframes moveText {
+    0% {
+      transform: translateX(-20%); /* Empieza desde la izquierda fuera de la pantalla */
+    }
+    100% {
+      transform: translateX(100%); /* Se mueve hasta la derecha fuera de la pantalla */
+    }
+  }
+
+  
+/* Ajustes generales para las tarjetas */
+.card {
+    border-radius: 10px; /* Bordes redondeados para un aspecto más suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidad */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para animación al pasar el cursor */
+  }
+  
+  /* Efecto al pasar el cursor sobre la tarjeta */
+  .card:hover {
+    transform: translateY(-5px); /* Eleva la tarjeta ligeramente */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+  }
+  
+  /* Ajustes para las imágenes dentro de las tarjetas */
+  .card-img-top {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho de la tarjeta */
+    height: 370px; /* Fija una altura para que todas las imágenes tengan el mismo tamaño */
+    object-fit: cover; /* Mantiene la proporción de la imagen y la recorta si es necesario */
+    border-top-left-radius: 10px; /* Bordes redondeados en la parte superior */
+    border-top-right-radius: 10px;
+  }
+  
+  /* Ajustes del texto dentro de la tarjeta */
+  .card-body {
+    padding: 1.5rem; /* Espaciado adecuado para el contenido */
+    text-align: center; /* Centra el texto */
+  }
+  
+  .card-title {
+    font-size: 1.2rem; /* Tamaño de fuente adecuado */
+    font-weight: bold; /* Pone en negrita el título */
+    color: #333; /* Color oscuro para el texto */
+    margin-top: 1px; /* Espacio entre la imagen y el título */
+  }
+  
+  /* Separación entre las tarjetas */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px; /* Espacio entre las tarjetas */
+    justify-content: space-around; /* Centra las tarjetas dentro de la fila */
+  }
+  
+  /* Responsividad para dispositivos pequeños */
+  @media (max-width: 768px) {
+    .card-img-top {
+      height: 180px; /* Reduce la altura de la imagen en pantallas más pequeñas */
+    }
+  
+    .card-title {
+      font-size: 1rem; /* Ajusta el tamaño de la fuente para pantallas pequeñas */
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Contenedor para las herramientas */
+.tools-animation-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    top: 50px; /* Ajustar la posición para que esté justo encima del footer */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .tool {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    display: block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    cursor: pointer;
+  }
+  
+  /* Colocamos las herramientas en posiciones circulares */
+  #tool1 {
+    background-color: skyblue;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  #tool2 {
+    background-color: gray;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+  
+  #tool3 {
+    background-color: black;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  #tool4 {
+    background-color: blue;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+  
+  /* Animación de movimiento circular */
+  @keyframes moveInCircle {
+    0% {
+      transform: rotate(0deg) translate(80px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translate(80px) rotate(-360deg);
+    }
+  }
+  
+  /* Iniciamos la animación */
+  .tools-animation-container {
+    animation: moveInCircle 0.1s linear infinite;
+  }
+  
+  /* Efecto cuando se hace clic: agrandamos y rompemos las herramientas */
+  .tool:active {
+    transform: scale(1.5) rotate(180deg);
+    opacity: 0.5;
+  }
+
+
+/* Estilos para el footer */
+.new_footer_top {
+    padding-top: 130px; /* Margen superior para separar la animación del footer */
+  }
+  
+  .footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #f8f9fa;
+  }
+  

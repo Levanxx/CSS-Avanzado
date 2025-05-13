@@ -1,0 +1,189 @@
+h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #0a2852 !important;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 2rem;
+  color: #0a2852 !important;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.dark {
+  border-color: #0a2852 !important;
+}
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.typing-effect {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 0.15em solid #0a2852; /* Efecto de cursor */
+  width: 0; /* Sin ancho inicial */
+}
+
+.animate {
+  animation: typing 4s steps(40) 1s 1 normal forwards, blink 0.75s step-end infinite;
+}
+
+
+.about-us {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin-top: 30px;
+}
+
+.about-us h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #0a2852;
+  margin: 10px auto;
+}
+
+.about-us p,
+.about-us ul {
+  margin-left: 20px;
+}
+
+.icon-color {
+  color: #0a2852;
+  font-size: 4rem;
+}
+
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 2.6rem;
+  }
+
+  p,
+  li {
+    font-size: rem;
+  }
+
+  .container {
+    padding: 20px;
+  }
+}
+
+.mision {
+  background-image: url('img/mision.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.vision {
+  background-image: url('img/vision.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.surgio {
+  background-image: url('img/valores.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.somos {
+  background-image: url('img/somos.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.equipo {
+  background-image: url('img/equipo.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.mision,
+.vision,
+.surgio,
+.equipo {
+  position: relative; /* Permite que z-index funcione */
+  z-index: 1; /* Eleva las imágenes */
+  transition: background-image 0.8s ease-in-out, transform 0.3s ease;
+}
+
+.mision:hover {
+  z-index: 3; /* Eleva la imagen al pasar el mouse */
+  transform: scale(1.05);
+  background-image: url('img/mision-hover.jpg');
+}
+
+.vision:hover {
+  z-index: 3; /* Eleva la imagen al pasar el mouse */
+  transform: scale(1.05);
+  background-image: url('img/vision-hover.jpg');
+}
+
+.surgio:hover {
+  z-index: 3; /* Eleva la imagen al pasar el mouse */
+  background-image: url('img/valores-hover.jpg');
+  transform: scale(1.05);
+}
+
+.equipo:hover {
+  z-index: 3; /* Eleva la imagen al pasar el mouse */
+  background-image: url('img/equipo-hover.jpg');
+  transform: scale(1.05);
+}
+
+.p-5,
+.m-5 {
+  position: relative; /* Asegura que el texto esté en su propio contexto */
+  z-index: 2; /* Por encima de las imágenes por defecto */
+}
+
+.p-5:hover,
+.m-5:hover {
+  background-color: #0a2852;
+}
+
+.p-5:hover h3,
+.m-5:hover h3 {
+  color: #f0f5f0 !important;
+}
+
+.p-5:hover h2,
+.m-5:hover h2 {
+  color: #f0f5f0 !important;
+}
+
+.p-5:hover i,
+.m-5:hover i {
+  color: #f0f5f0;
+}
+
+
+.p-5:hover p,
+.m-5:hover p,
+.p-5:hover li,
+.m-5:hover li {
+  color: #ffffff;
+}

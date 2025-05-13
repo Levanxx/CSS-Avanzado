@@ -1,0 +1,390 @@
+/* Banner estilos */
+.banner {
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+  }
+  
+  .banner:nth-child(1) {
+    background-image: url('img/2.png');
+  }
+  
+  .banner:nth-child(2) {
+    background-image: url('img/3.png');
+  }
+  
+  .banner:nth-child(3) {
+    background-image: url('img/1.png');
+  }
+  
+  /* Estilo del botón */
+  a.btn.btn-light {
+    padding-left: 33px;
+    padding-right: 33px;
+    padding-bottom: 16px;
+    margin: 20px auto;
+    padding-top: 16px;
+    border-radius: 9px;
+    background: #0a2852;
+    border: none;
+    font-weight: bold;
+    color: #f2f2f2;
+    font-family: inherit;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+
+  a.btn.btn-light:hover{
+    box-shadow: 7px 5px 56px -14px #ffffff;
+  }
+
+  a.btn.btn-light:active{
+    transform: scale(0.97);
+    box-shadow: 7px 5px 56px -10px #ffffff;
+  }
+
+
+
+ /* Contenedor de las cartas */
+.cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Espaciado entre las cartas */
+  flex-wrap: wrap; 
+  margin-top: 30px;
+}
+
+/* Cartas de Servicios */
+.card {
+  position: relative;
+  width: 340px;
+  height: 400px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1000px;
+  box-shadow: 0 0 0 5px #ffffff80;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen de cada carta */
+.imagen_carta {
+  width: 360px;
+  height: 420px; 
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; 
+}
+
+.imagen-1 {
+  background-image: url('img/cel.png'); /* Imagen para la primera carta */
+}
+
+.imagen-2 {
+  background-image: url('img/compu.png'); /* Imagen para la segunda carta */
+}
+
+.imagen-3 {
+  background-image: url('img/tv.png'); /* Imagen para la tercera carta */
+}
+
+.imagen-4 {
+  background-image: url('img/video.png'); /* Imagen para la tercera carta */
+}
+
+/* Contenido de la carta */
+.card__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+  transform: rotateX(-90deg);
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover .card__content {
+  transform: rotateX(0deg);
+}
+
+/* Títulos y descripciones */
+.card__title {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+}
+
+.card__description {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #777;
+  line-height: 1.4;
+}
+
+/* Estilos Generales */
+.icono {
+  display: inline-block;
+  width: 24px; /* Ajusta el tamaño según lo necesites */
+  height: 24px; /* Ajusta el tamaño según lo necesites */
+  vertical-align: middle;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 8px;
+}
+
+.icono-celular {
+  background-image: url('img/phone.svg');
+}
+
+.icono-computadora {
+  background-image: url('img/laptop.svg');
+}
+
+.icono-smart-tv {
+  background-image: url('img/tv.svg');
+}
+
+.icono-consola {
+  background-image: url('img/controller.svg');
+}
+
+
+/* Contenedor principal */
+#employee-of-the-month {
+  background-color: #f4f4f9;
+  padding: 40px 20px;
+}
+
+/* Contenedor principal */
+#employee-of-the-month {
+  background-color: #f4f4f9;
+  padding: 40px 20px;
+}
+
+/* Tarjeta del empleado */
+.employee-card {
+  display: flex;
+  flex-wrap: wrap;  /* Permite que los elementos se ajusten a pantallas más pequeñas */
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 0 auto;
+  /*borde punteado*/
+  border: 5px dotted #0a2852;
+  gap: 20px;
+  max-width: 1400px;  /* Controla el tamaño máximo de la tarjeta */
+}
+
+/* Trofeo animado */
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 3em;
+  font-weight: 900;
+  position: relative;
+  transition: all 1s ease;
+  text-align: center;
+  margin-left: 5%;
+}
+
+.contenedor__star {
+  transition: all .7s ease-in-out;
+}
+
+.svg-icon {
+  position: absolute;
+  fill: #0a2852;
+  z-index: 1;
+  margin-left: 10%;
+}
+
+.star-eight {
+  background: #9fc2c4;
+  width: 150px;
+  height: 150px;
+  position: relative;
+  text-align: center;
+  animation: rot 3s infinite;
+}
+
+.star-eight::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 150px;
+  width: 150px;
+  background: #9fc2c4;
+  transform: rotate(135deg);
+}
+
+.employee-card{
+  min-width: 300px;
+  min-height: 300px;
+}
+
+.contenedor:hover .contenedor__star {
+  transform: rotateX(70deg) translateY(250px);
+  box-shadow: 0px 0px 120px -100px #9fc2c4;
+}
+
+.contenedor:hover .svg-icon {
+  animation: grow 1s linear infinite;
+}
+
+@keyframes rot {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(340deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes grow {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-5deg);
+  }
+
+  75% {
+    transform: rotate(5deg);
+  }
+
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+/* Detalles del empleado */
+.employee-details {
+  flex: 2;
+  text-align: left;
+  max-width: 600px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.message {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .employee-card {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .employee-details {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .svg-icon {
+    height: 100px;
+    width: 100px;
+  }
+
+  .star-eight {
+    width: 120px;
+    height: 120px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .message {
+    font-size: 14px;
+  }
+}
+
+
+/* Imagen del empleado */
+.employee-img {
+  flex: 1;
+  width: 500px; /* Cambia el tamaño según lo necesites */
+  height: 400px; /* Cambia el tamaño según lo necesites */
+  background-image: url('img/tecnico.png');
+  background-size: contain; /* Mantiene las proporciones */
+  background-position: center;
+  background-repeat: no-repeat; /* Evita repeticiones */
+}
+
+
+/* Detalles del empleado */
+.employee-details {
+  flex: 2;
+  text-align: left;
+  margin-left: 7%;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.message {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555;
+}
+
+
+.sp {
+  width: 100px;
+  height: 100px; 
+  border-radius: 5px;
+  margin-left: 33%; 
+  margin-right: 33%;
+  margin-top: 10%;
+  background-image: url('img/Logo.png'); 
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; 
+}
+
+.stars {
+  font-size: 20px; /* Tamaño de las estrellas */
+  color: #ffdd00; /* Color amarillo */
+  margin-top: 10px; /* Separación del texto */
+}
